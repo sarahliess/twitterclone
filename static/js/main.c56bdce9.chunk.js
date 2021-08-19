@@ -1,0 +1,2 @@
+(this.webpackJsonptwitterclone=this.webpackJsonptwitterclone||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);var c=n(1),r=n.n(c),i=n(3),o=n.n(i),d=(n(8),n(0));var s=function(){return Object(d.jsx)("div",{children:Object(d.jsx)("header",{children:Object(d.jsx)("div",{children:"Hello World!"})})})};o.a.render(Object(d.jsx)(r.a.StrictMode,{children:Object(d.jsx)(s,{})}),document.getElementById("root"))},8:function(e,t,n){}},[[10,1,2]]]);
+//# sourceMappingURL=main.c56bdce9.chunk.js.map

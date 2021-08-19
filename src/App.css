@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+/*
+COLORS: 
+cyan: #329AF7
+white: #ffffff
+black: #171B22
+
+*/
+
+*{
+    text-decoration: none;
+    font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    border: solid orange;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top{
+    display: flex;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*-----------NAVBAR-------------*/
+.NavBarMain{
+    width: 30%;
+    border: solid black;
 }
 
-.App-link {
-  color: #61dafb;
+.NavBar{
+    border: solid blue;
+    display: flex;
+    flex-direction: column;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.NavLink{
+    margin: .5em 1em;
+}
+
+.Icons{
+    width: 20px;
+}
+
+.Button{
+    margin: 0 auto;
+}
+
+button{
+    background-color: #329AF7;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: .6em 4em;
+    margin-top: 1em;
+}
+
+/*-----------TWEETS-------------*/
+
+.Main{
+    border: solid pink;
+    width: 35%;
+}
+
+.Tweet{
+    border: solid green;
+
+}
+
+.IconGroup{
+    display:flex;
+    justify-content: space-between;
+}
+
+.IconPost{
+    width: 20px;
+}
+
+/*-----------SIDEBAR-------------*/
+
+.SideBar{
+    border: solid purple;
+    width: 30%;
+}
+
+/*-----------FOOTER-------------*/
+
+.bottom{
+    border: solid yellow;
+    display: flex;
+    justify-content: center;
+    height: 100px;
 }

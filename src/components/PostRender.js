@@ -8,16 +8,33 @@ function PostRender({ message }) {
     <>
       {message && (
         <div className="Tweet">
-          <div>
-            <div className="Name">{message.user.name}</div>
-            <div className="NameDate">@username {message.date}</div>
-            <div className="PostText">{message.text}</div>
+          <div className="UserPhotoBlock">
+            <img
+              className="UserPhoto"
+              src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
+            />
           </div>
-          <div className="IconGroup">
-            <img src={bubble} alt="comment" className="IconPost" />
-            <img src={retweet} alt="retweet" className="IconPost" />
-            <img src={heart} alt="like" className="IconPost" />
-            <img src={share} alt="share" className="IconPost" />
+          <div className="TweetInner">
+            <div>
+              <div className="TweetTop">
+                <div className="Name">{message.user.name}</div>
+                <div className="NameDate">@username {message.date}</div>
+              </div>
+
+              <div className="TweetCenter">
+                <div className="PostText">{message.text}</div>
+                <img
+                  className="TweetImage"
+                  src="https://techcrunch.com/wp-content/uploads/2019/09/twitter-hidden-replies1.png?w=730&crop=1"
+                />
+              </div>
+            </div>
+            <div className="IconGroup">
+              <img src={bubble} alt="comment" className="IconPost" />
+              <img src={retweet} alt="retweet" className="IconPost" />
+              <img src={heart} alt="like" className="IconPost" />
+              <img src={share} alt="share" className="IconPost" />
+            </div>
           </div>
         </div>
       )}

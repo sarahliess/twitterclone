@@ -7,11 +7,16 @@ import letter from "../img/letter.png";
 import menu from "../img/menu.png";
 import user from "../img/user.png";
 import message from "../img/message.png";
+import save from "../img/save.png";
 
 function NavBar() {
+  const buttonMessage = () => {
+    alert("Does this world really neeed another pointless tweet?");
+  };
+
   return (
     <div className="NavBar">
-      <img src={twitter} alt="twitter logo" className="Icons" />
+      <img src={twitter} alt="twitter logo" className="Twitter" />
 
       <NavLink to="/" className="NavLink">
         <img src={home} alt="home" className="Icons" /> Home
@@ -33,12 +38,12 @@ function NavBar() {
       </NavLink>
 
       <NavLink to="/" className="NavLink">
-        <img alt="" className="Icons" />
+        <img src={save} alt="bookmars" className="Icons" />
         Bookmarks
       </NavLink>
 
       <NavLink to="/" className="NavLink">
-        <img src={menu} alt="bookmarks" className="Icons" />
+        <img src={menu} alt="lists" className="Icons" />
         Lists
       </NavLink>
 
@@ -52,7 +57,7 @@ function NavBar() {
         More
       </NavLink>
       <div className="Button">
-        <button>Tweet</button>
+        <button onClick={buttonMessage}>Tweet</button>
       </div>
     </div>
   );

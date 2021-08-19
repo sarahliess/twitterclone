@@ -6,87 +6,85 @@ black: #171B22
 
 */
 
-*{
-    text-decoration: none;
-    font-family: sans-serif;
+* {
+  text-decoration: none;
+  font-family: sans-serif;
 }
 
-.App{
-    border: solid orange;
+.App {
+  border: solid orange;
 }
 
-.top{
-    display: flex;
-    justify-content: space-between;
+.top {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*-----------NAVBAR-------------*/
-.NavBarMain{
-    width: 30%;
-    border: solid black;
+.NavBarMain {
+  width: 30%;
+  border: solid black;
 }
 
-.NavBar{
-    border: solid blue;
-    display: flex;
-    flex-direction: column;
-
+.NavBar {
+  border: solid blue;
+  display: flex;
+  flex-direction: column;
 }
 
-.NavLink{
-    margin: .5em 1em;
+.NavLink {
+  margin: 0.5em 1em;
 }
 
-.Icons{
-    width: 20px;
+.Icons {
+  width: 20px;
 }
 
-.Button{
-    margin: 0 auto;
+.Button {
+  margin: 0 auto;
 }
 
-button{
-    background-color: #329AF7;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: .6em 4em;
-    margin-top: 1em;
+button {
+  background-color: #329af7;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6em 4em;
+  margin-top: 1em;
 }
 
 /*-----------TWEETS-------------*/
 
-.Main{
-    border: solid pink;
-    width: 35%;
+.Main {
+  border: solid pink;
+  width: 35%;
 }
 
-.Tweet{
-    border: solid green;
-
+.Tweet {
+  border: solid green;
 }
 
-.IconGroup{
-    display:flex;
-    justify-content: space-between;
+.IconGroup {
+  display: flex;
+  justify-content: space-between;
 }
 
-.IconPost{
-    width: 20px;
+.IconPost {
+  width: 20px;
 }
 
 /*-----------SIDEBAR-------------*/
 
-.SideBar{
-    border: solid purple;
-    width: 30%;
+.SideBar {
+  border: solid purple;
+  width: 30%;
 }
 
 /*-----------FOOTER-------------*/
 
-.bottom{
-    border: solid yellow;
-    display: flex;
-    justify-content: center;
-    height: 100px;
+.bottom {
+  border: solid yellow;
+  display: flex;
+  justify-content: center;
+  height: 100px;
 }

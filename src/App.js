@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
@@ -8,144 +8,28 @@ import SideBar from "./components/SideBar";
 import arrow from "./img/arrow.png";
 import threedots from "./img/threedots.png";
 import twitter from "./img/twitter.png";
-
-// const	messages = [
-//   {
-//     id: "fb1022",
-//     text: "hello world!",
-//     date: "19-08-2021",
-//     user: {
-//        id: "fb1122",
-//        name: "Frank",
-//        email: "frank@gmail.com"
-//     }
-//  },
-//  {
-//   id: "fb1023",
-//   text: "It is a twitter project!",
-//   date: "19-08-2021",
-//   user: {
-//      id: "fb1123",
-//      name: "Fredy",
-//      email: "fredy@gmail.com"
-//   }
-// },
-// {
-//   id: "fb1024",
-//   text: "hello twitter",
-//   date: "19-08-2021",
-//   user: {
-//      id: "fb1124",
-//      name: "Dennis",
-//      email: "dennis@gmail.com"
-//   }
-// },
-// {
-//   id: "fb1025",
-//   text: "There is only one planet!",
-//   date: "‘19-08-2021’",
-//   user: {
-//      id: "‘fb1125’",
-//      name: "‘Sarah’",
-//      email: "‘sarah@gmail.com’"
-//   }
-// },
-// {
-//   id: "fb1026’",
-//   text: "‘Take your time!’",
-//   date: "‘19-08-2021’",
-//   user: {
-//      id: "‘fb1126’",
-//      name: "‘Soraya’",
-//      email: "‘soraya@gmail.com’"
-//   }
-// }]
-
-// console.log(messages[1].id);
+import axios from "axios";
 
 function App() {
-  const [messages, setMessages] = useState([
-    {
-      id: "fb1022",
-      text: "hello world! This is my very first twitter post. I hate my life. Corona sucks. This sucks. ",
-      date: "19-08-2021",
-      user: {
-        id: "fb1122",
-        name: "Frank",
-        email: "frank@gmail.com",
-      },
-    },
-    {
-      id: "fb1023",
-      text: "It is a twitter project!",
-      date: "19-08-2021",
-      user: {
-        id: "fb1123",
-        name: "Fredy",
-        email: "fredy@gmail.com",
-      },
-    },
-    {
-      id: "fb1024",
-      text: "hello twitter, you suck.",
-      date: "19-08-2021",
-      user: {
-        id: "fb1124",
-        name: "Dennis",
-        email: "dennis@gmail.com",
-      },
-    },
-    {
-      id: "fb10222",
-      text: "There is only one planet! Very true.",
-      date: "‘19-08-2021’",
-      user: {
-        id: "‘fb1125’",
-        name: "‘Sarah’",
-        email: "‘sarah@gmail.com’",
-      },
-    },
-    {
-      id: "fb1028",
-      text: "There is only one planet!",
-      date: "‘19-08-2021’",
-      user: {
-        id: "‘fb1125’",
-        name: "‘Sarah’",
-        email: "‘sarah@gmail.com’",
-      },
-    },
-    {
-      id: "fb1023335",
-      text: "There is only one planet!",
-      date: "‘19-08-2021’",
-      user: {
-        id: "‘fb1125’",
-        name: "‘Sarah’",
-        email: "‘sarah@gmail.com’",
-      },
-    },
-    {
-      id: "fb1024445",
-      text: "There is only one planet!",
-      date: "‘19-08-2021’",
-      user: {
-        id: "‘fb1125’",
-        name: "‘Sarah’",
-        email: "‘sarah@gmail.com’",
-      },
-    },
-    {
-      id: "fb1026’",
-      text: "‘Take your time!’",
-      date: "‘19-08-2021’",
-      user: {
-        id: "‘fb1126’",
-        name: "‘Soraya’",
-        email: "‘soraya@gmail.com’",
-      },
-    },
-  ]);
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    const getTweets = async () => {
+      try {
+        const { data } = await axios.get(
+          `${process.env.REACT_APP_TWEETS_API}/posts`
+        );
+        setMessages(data);
+      } catch (error) {
+        if (error.response) {
+          console.log(error.response.data.error);
+        } else {
+          console.log(error.message);
+        }
+      }
+    };
+    getTweets();
+  }, []);
 
   const alertText = () => {
     alert(

@@ -7,7 +7,7 @@ function Home({ messages }) {
   return (
     <div className="Feed">
       {messages.map((message) => (
-        <Link to={`/tweets/${message.id}`}>
+        <Link to={`/tweets/${message._id}`} key={message._id}>
           <PostRender message={message} />
         </Link>
       ))}

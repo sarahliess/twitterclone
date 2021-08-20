@@ -3,10 +3,11 @@ import PostRender from "./PostRender";
 
 function PostDetail({ messages }) {
   const { id } = useParams();
+
   return (
     <>
       {messages
-        .filter((message) => message.id === id)
+        .filter((message) => message._id === id)
         .map((message) => (
           <PostRender message={message} />
         ))}

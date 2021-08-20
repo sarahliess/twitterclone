@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import PostDetail from "./components/PostDetail";
 import SideBar from "./components/SideBar";
+import Login from "./components/Login";
 import arrow from "./img/arrow.png";
 import threedots from "./img/threedots.png";
 import twitter from "./img/twitter.png";
@@ -12,6 +13,16 @@ import axios from "axios";
 
 function App() {
   const [messages, setMessages] = useState([]);
+  const [keyword, setKeyword] = useState("");
+
+  // const loadQuery = (keyword) => {
+  //   `${process.env.REACT_APP_TWEETS_API}/${keyword}`;
+  // };
+
+  const changeSearch = (e) => {
+    setKeyword(e.target.value);
+    console.log(keyword);
+  };
 
   useEffect(() => {
     const getTweets = async () => {
@@ -49,15 +60,22 @@ function App() {
             <a href="/">
               <img className="Arrow" src={arrow} />
             </a>
-            <input type="text" />
+            <input
+              onChange={(e) => setKeyword(e.target.value)}
+              type="text"
+              placeholder="Search"
+            />
             <img onClick={alertText} className="ThreeDots" src={threedots} />
           </div>
           <Switch>
             <Route path="/tweets/:id">
               <PostDetail messages={messages} />
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <Home messages={messages} />
+            </Route>
+            <Route path="/login">
+              <Login />
             </Route>
           </Switch>
         </main>
@@ -70,7 +88,7 @@ function App() {
           this one: guaranteed 0% Trump influence. Want to leave this safe
           space? Won't stop you, go ahead:
         </p>
-        <a href="https://twitter.com/">
+        <a href="https://twitter.com/" target="_blank">
           <img src={twitter} alt="twitter logo" className="TwitterBottom" />
         </a>
       </footer>

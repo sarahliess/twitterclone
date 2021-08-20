@@ -4,6 +4,12 @@ import heart from "../img/heart.png";
 import share from "../img/share.png";
 
 function PostRender({ message }) {
+  const dateFormat = new Date(message.date);
+  const dateToday = new Date();
+
+  console.log(dateFormat);
+  console.log(dateToday);
+
   return (
     <>
       {message && (
@@ -18,7 +24,9 @@ function PostRender({ message }) {
             <div>
               <div className="TweetTop">
                 <div className="Name">{message.user.name}</div>
-                <div className="NameDate">@username {message.date}</div>
+                <div className="NameDate">
+                  @{message.user.name} {message.date}
+                </div>
               </div>
 
               <div className="TweetCenter">

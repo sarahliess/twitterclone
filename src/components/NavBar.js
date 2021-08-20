@@ -11,7 +11,7 @@ import save from "../img/save.png";
 
 function NavBar() {
   const buttonMessage = () => {
-    alert("Does this world really neeed another pointless tweet?");
+    alert(`Does this world reeeaaaaally need another "funny" tweet?`);
   };
 
   return (
@@ -47,7 +47,7 @@ function NavBar() {
         Lists
       </NavLink>
 
-      <NavLink to="/profile/" className="NavLink">
+      <NavLink to="/login" className="NavLink">
         <img src={user} alt="profile" className="Icons" />
         Profile
       </NavLink>

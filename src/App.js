@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import PostDetail from "./components/PostDetail";
 import SideBar from "./components/SideBar";
 import Login from "./components/Login";
+import Fallback from "./components/Fallback";
 import arrow from "./img/arrow.png";
 import threedots from "./img/threedots.png";
 import twitter from "./img/twitter.png";
@@ -14,15 +15,6 @@ import axios from "axios";
 function App() {
   const [messages, setMessages] = useState([]);
   const [keyword, setKeyword] = useState("");
-
-  // const loadQuery = (keyword) => {
-  //   `${process.env.REACT_APP_TWEETS_API}/${keyword}`;
-  // };
-
-  const changeSearch = (e) => {
-    setKeyword(e.target.value);
-    console.log(keyword);
-  };
 
   useEffect(() => {
     const getTweets = async () => {
@@ -57,15 +49,20 @@ function App() {
 
         <main className="Main">
           <div className="Input">
-            <a href="/">
-              <img className="Arrow" src={arrow} />
+            <a href="/twitterclone/">
+              <img className="Arrow" alt="back" src={arrow} />
             </a>
             <input
               onChange={(e) => setKeyword(e.target.value)}
               type="text"
               placeholder="Search"
             />
-            <img onClick={alertText} className="ThreeDots" src={threedots} />
+            <img
+              onClick={alertText}
+              className="ThreeDots"
+              alt="menu"
+              src={threedots}
+            />
           </div>
           <Switch>
             <Route path="/tweets/:id">
@@ -77,6 +74,9 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
+            <Route path="/fallback">
+              <Fallback />
+            </Route>
           </Switch>
         </main>
 
@@ -85,13 +85,17 @@ function App() {
       <footer className="bottom">
         <p>
           An attempt to clone twitter in less than two days, by{" "}
-          <a href="https://github.com/sarahliess" target="_blank">
+          <a
+            href="https://github.com/sarahliess"
+            target="_blank"
+            rel="noreferrer"
+          >
             Sarah Ließ
           </a>
           . Good thing about this one: guaranteed 0% Trump influence. Want to
           leave this safe space? Won't stop you, go ahead:
         </p>
-        <a href="https://twitter.com/" target="_blank">
+        <a href="https://twitter.com/" target="_blank" rel="noreferrer">
           <img src={twitter} alt="twitter logo" className="TwitterBottom" />
         </a>
       </footer>

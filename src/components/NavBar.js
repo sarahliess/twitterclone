@@ -22,27 +22,27 @@ function NavBar() {
         <img src={home} alt="home" className="Icons" /> Home
       </NavLink>
 
-      <NavLink to="/tweets" className="NavLink">
+      <NavLink to="/fallback" className="NavLink">
         <img src={hashtag} alt="hashtag" className="Icons" />
         Explore
       </NavLink>
 
-      <NavLink to="/" className="NavLink">
+      <NavLink to="/fallback" className="NavLink">
         <img src={speaker} alt="notifications" className="Icons" />
         Notifications
       </NavLink>
 
-      <NavLink to="/" className="NavLink">
+      <NavLink to="/fallback" className="NavLink">
         <img src={letter} alt="messages" className="Icons" />
         Messages
       </NavLink>
 
-      <NavLink to="/" className="NavLink">
+      <NavLink to="/fallback" className="NavLink">
         <img src={save} alt="bookmars" className="Icons" />
         Bookmarks
       </NavLink>
 
-      <NavLink to="/" className="NavLink">
+      <NavLink to="/fallback" className="NavLink">
         <img src={menu} alt="lists" className="Icons" />
         Lists
       </NavLink>
@@ -52,7 +52,7 @@ function NavBar() {
         Profile
       </NavLink>
 
-      <NavLink to="/" className="NavLink">
+      <NavLink to="/fallback" className="NavLink">
         <img src={message} alt="more" className="Icons" />
         More
       </NavLink>

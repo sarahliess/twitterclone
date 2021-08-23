@@ -18,6 +18,7 @@ function PostRender({ message }) {
             <img
               className="UserPhoto"
               src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
+              alt="userphoto"
             />
           </div>
           <div className="TweetInner">
@@ -34,6 +35,7 @@ function PostRender({ message }) {
                 <img
                   className="TweetImage"
                   src="https://techcrunch.com/wp-content/uploads/2019/09/twitter-hidden-replies1.png?w=730&crop=1"
+                  alt="tweetimage"
                 />
               </div>
             </div>

@@ -43,6 +43,11 @@ black: #171B22
   align-items: center;
 }
 
+.NavLink:hover,
+.NavLink:active {
+  color: #329af7;
+}
+
 .NavLink img {
   margin-right: 0.7em;
 }
@@ -283,4 +288,17 @@ input {
   width: 30px;
   padding: 0.2em;
   margin-top: 1em;
+}
+
+/*-----------FALLBACK-------------*/
+.Fallback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.FallbackHighlight {
+  color: #329af7;
 }

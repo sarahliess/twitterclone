@@ -3,11 +3,11 @@ function Fallback() {
     <div className="Fallback">
       <div className="FallbackInner">
         Oops. Nothing to see here yet. But check out{" "}
-        <a className="FallbackHighlight" href="/">
+        <a className="FallbackHighlight" href="/twitterclone">
           Home
         </a>{" "}
         and{" "}
-        <a className="FallbackHighlight" href="/login">
+        <a className="FallbackHighlight" href="/twitterclone/login">
           Profile
         </a>
         !

@@ -12,7 +12,7 @@ function Fallback() {
         and{" "}
         <a
           className="FallbackHighlight"
-          href="https://sarahliess.github.io/twitterclone/login"
+          href="https://sarahliess.github.io/twitterclone/#/login"
         >
           Profile
         </a>

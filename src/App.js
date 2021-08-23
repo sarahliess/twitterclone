@@ -84,9 +84,12 @@ function App() {
       </div>
       <footer className="bottom">
         <p>
-          An attempt to clone twitter in less than two days. Good thing about
-          this one: guaranteed 0% Trump influence. Want to leave this safe
-          space? Won't stop you, go ahead:
+          An attempt to clone twitter in less than two days, by{" "}
+          <a href="https://github.com/sarahliess" target="_blank">
+            Sarah Ließ
+          </a>
+          . Good thing about this one: guaranteed 0% Trump influence. Want to
+          leave this safe space? Won't stop you, go ahead:
         </p>
         <a href="https://twitter.com/" target="_blank">
           <img src={twitter} alt="twitter logo" className="TwitterBottom" />
